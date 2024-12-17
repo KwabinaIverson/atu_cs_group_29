@@ -28,7 +28,7 @@ function checkPassword() {
   });
 }
 
-// checkPassword();
+checkPassword();
 
 // Event listener for button click
 signupButton.addEventListener("click", function() {
