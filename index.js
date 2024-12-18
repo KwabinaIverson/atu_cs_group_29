@@ -12,7 +12,7 @@ const user = {fname: "", gmail: "", password: ""};
 // Load existing user info if available
 if (localStorage.getItem("user")) {
   const savedUser = JSON.parse(localStorage.getItem("user"));
-  alert("User already exits")
+  alert("User already exits");
 }
 
 function checkPassword() {
@@ -41,6 +41,8 @@ signupButton.addEventListener("click", function() {
 
     // Store user data in localStorage
     localStorage.setItem("user", JSON.stringify(user));
+
+    alert("Account created");
   }
   else {
     confirmPassword.addEventListener("blur", ()=> {
