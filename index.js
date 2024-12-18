@@ -12,7 +12,7 @@ const user = {fname: "", gmail: "", password: ""};
 // Load existing user info if available
 if (localStorage.getItem("user")) {
   const savedUser = JSON.parse(localStorage.getItem("user"));
-  // alert("User already exits")
+  alert("User already exits")
 }
 
 function checkPassword() {
