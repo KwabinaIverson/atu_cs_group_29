@@ -13,6 +13,7 @@ const user = {fname: "", gmail: "", password: ""};
 if (localStorage.getItem("user")) {
   const savedUser = JSON.parse(localStorage.getItem("user"));
   alert("User already exits");
+  console.log("User already exits...");
 }
 
 function checkPassword() {
@@ -43,6 +44,7 @@ signupButton.addEventListener("click", function() {
     localStorage.setItem("user", JSON.stringify(user));
 
     alert("Account created");
+    console.log("Account created successfully...");
   }
   else {
     confirmPassword.addEventListener("blur", ()=> {
