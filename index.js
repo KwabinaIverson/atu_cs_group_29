@@ -4,6 +4,7 @@ const gmail = document.getElementById("gmail");
 const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirm-password");
 const signupButton = document.querySelector(".signup-button");
+const loginButton = document.querySelector(".login-button");
 
 // User object
 const user = {fname: "", gmail: "", password: ""};
@@ -45,6 +46,7 @@ signupButton.addEventListener("click", function() {
 
     alert("Account created");
     console.log("Account created successfully...");
+    windiow.location.href = "./login.html";
   }
   else {
     confirmPassword.addEventListener("blur", ()=> {
@@ -52,6 +54,12 @@ signupButton.addEventListener("click", function() {
     });
   }
 
+});
+
+
+// Click on login button
+loginButton.addEventListener("click", () => {
+    windiow.location.href = "./index.html";
 });
 
 
