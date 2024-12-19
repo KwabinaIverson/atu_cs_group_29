@@ -46,7 +46,7 @@ signupButton.addEventListener("click", function() {
 
     alert("Account created");
     console.log("Account created successfully...");
-    windiow.location.href = "./login.html";
+    windiow.location.href = "login.html";
   }
   else {
     confirmPassword.addEventListener("blur", ()=> {
@@ -59,7 +59,7 @@ signupButton.addEventListener("click", function() {
 
 // Click on login button
 loginButton.addEventListener("click", () => {
-    windiow.location.href = "./index.html";
+    windiow.location.href = "index.html";
 });
 
 
