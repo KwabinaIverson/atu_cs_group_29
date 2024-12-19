@@ -7,36 +7,29 @@ const signupButton = document.querySelector(".signup-button");
 const loginButton = document.querySelector(".login-button");
 
 // User object
-const user = {fname: "", gmail: "", password: ""};
-
+const user = { fname: "", gmail: "", password: "" };
 
 // Load existing user info if available
 if (localStorage.getItem("user")) {
-  const savedUser = JSON.parse(localStorage.getItem("user"));
-  alert("User already exits");
-  console.log("User already exits...");
+  alert("User already exists");
+  console.log("User already exists...");
 }
 
+// Check password match
 function checkPassword() {
-  confirmPassword.addEventListener("blur", function() {
-    if (password.value !== confirmPassword.value) {
-      confirmPassword.style.border = "2px solid #ef4444";
-      return false;
-    }
-    else {
-      confirmPassword.style.border = " 2px solid #60a5fa";
-      return true;
-    }
-  });
+  if (password.value !== confirmPassword.value) {
+    confirmPassword.style.border = "2px solid #ef4444";
+    return false;
+  } else {
+    confirmPassword.style.border = "2px solid #60a5fa";
+    return true;
+  }
 }
 
-checkPassword();
-
-// Event listener for button click
-signupButton.addEventListener("click", function() {
-
-  if (checkPassword === true) {
-    // Update user object
+// Event listener for signup button
+signupButton.addEventListener("click", function(event) {
+  event.preventDefault();
+  if (checkPassword()) {
     user.fname = fullName.value;
     user.gmail = gmail.value;
     user.password = password.value;
@@ -44,20 +37,14 @@ signupButton.addEventListener("click", function() {
     // Store user data in localStorage
     localStorage.setItem("user", JSON.stringify(user));
 
-    alert("Account created");
+    alert("Account created successfully");
     console.log("Account created successfully...");
     window.location.href = "./login.html";
   }
-  else {
-    confirmPassword.addEventListener("blur", ()=> {
-      confirmPassword.style.border = "2px solid #ef4444";
-    });
-  }
-
 });
 
-
-// Click on login button
-loginButton.addEventListener("click", () => {
-    window.location.href = "./index.html";
+// Event listener for login button
+loginButton.addEventListener("click", function(event) {
+  event.preventDefault();
+  window.location.href = "./index.html";
 });
