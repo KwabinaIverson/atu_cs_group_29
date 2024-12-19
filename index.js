@@ -46,7 +46,7 @@ signupButton.addEventListener("click", function() {
 
     alert("Account created");
     console.log("Account created successfully...");
-    windiow.location.href = "./login.html";
+    window.location.href = "./login.html";
   }
   else {
     confirmPassword.addEventListener("blur", ()=> {
@@ -59,22 +59,5 @@ signupButton.addEventListener("click", function() {
 
 // Click on login button
 loginButton.addEventListener("click", () => {
-    windiow.location.href = "./index.html";
+    window.location.href = "./index.html";
 });
-
-
-// document.querySelectorAll('a').forEach(link => {
-//   link.addEventListener('click', event => {
-//     event.preventDefault();
-//     const url = link.href;
-    
-//     document.startViewTransition(() => {
-//       fetch(url)
-//         .then(response => response.text())
-//         .then(html => {
-//           document.body.innerHTML = html;
-//           history.pushState(null, '', url);
-//         });
-//     });
-//   });
-// });
