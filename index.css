@@ -142,7 +142,28 @@ input:focus {
   font-style: normal;
 }
 
+.login-button {
+  width: 60%;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-top: 5px;
+  font-family: "Pacifico", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
 .signup .signup-button:hover {
+  background-color: #0056b3;
+  transition: all 0.3s ease;
+}
+
+.login-button {
   background-color: #0056b3;
   transition: all 0.3s ease;
 }
@@ -187,6 +208,10 @@ input:focus {
     width: 80%;
   }
   
+  .login-button {
+   width: 80%;
+  }
+
   input {
     width: 80%;
     color: #0f172a;
